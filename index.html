@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>般若波罗蜜多心经 - 佛经经典</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "楷体", "STKaiti", serif;
+            background-color: #f8f0e0;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M20,50 Q35,30 50,50 Q65,70 80,50" fill="none" stroke="%23d4c8a4" stroke-width="0.5" opacity="0.3"/></svg>');
+            color: #5c3a21;
+            line-height: 1.8;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle, transparent 20%, #f8f0e0 80%, #f0e6d0 100%);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 253, 245, 0.9);
+            border: 12px double #c19a6b;
+            border-radius: 4px;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(92, 58, 33, 0.2);
+        }
+        
+        .container::before {
+            content: "卍";
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #c19a6b;
+            opacity: 0.2;
+        }
+        
+        .container::after {
+            content: "卍";
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #c19a6b;
+            opacity: 0.2;
+            transform: rotate(180deg);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #d4c8a4;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 42px;
+            color: #8b0000;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.2);
+            letter-spacing: 8px;
+        }
+        
+        .subtitle {
+            font-size: 22px;
+            color: #c19a6b;
+            margin-bottom: 25px;
+            letter-spacing: 3px;
+        }
+        
+        .lotus {
+            display: inline-block;
+            font-size: 36px;
+            color: #d4a76a;
+            margin: 0 15px;
+            animation: rotate 15s linear infinite;
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .sutra-container {
+            padding: 30px 0;
+            font-size: 28px;
+            line-height: 2.2;
+            text-align: center;
+        }
+        
+        .sutra-section {
+            margin-bottom: 40px;
+        }
+        
+        .sutra-section h2 {
+            font-size: 32px;
+            color: #8b4513;
+            margin-bottom: 25px;
+            border-bottom: 1px dashed #d4c8a4;
+            padding-bottom: 10px;
+        }
+        
+        .sutra-text {
+            margin-bottom: 20px;
+        }
+        
+        .chinese-char {
+            font-size: 36px;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+            margin: 0 2px;
+            vertical-align: top;
+        }
+        
+        .pinyin {
+            position: absolute;
+            top: -28px;
+            left: 0;
+            right: 0;
+            font-size: 14px;
+            text-align: center;
+            color: #c19a6b;
+            font-family: Arial, sans-serif;
+            letter-spacing: 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #d4c8a4;
+            color: #8b4513;
+            font-size: 18px;
+        }
+        
+        .buddha-hand {
+            display: block;
+            margin: 20px auto;
+            font-size: 50px;
+            color: #d4a76a;
+        }
+        
+        .decoration {
+            position: absolute;
+            opacity: 0.1;
+            font-size: 120px;
+            z-index: -1;
+        }
+        
+        .dec-1 {
+            top: 10%;
+            left: 5%;
+            transform: rotate(-15deg);
+        }
+        
+        .dec-2 {
+            bottom: 10%;
+            right: 5%;
+            transform: rotate(15deg);
+        }
+        
+        .note {
+            font-size: 18px;
+            color: #8b4513;
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                border-width: 8px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .chinese-char {
+                font-size: 28px;
+            }
+            
+            .pinyin {
+                font-size: 12px;
+                top: -22px;
+            }
+            
+            .sutra-container {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="decoration dec-1">佛</div>
+    <div class="decoration dec-2">禪</div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>般若波罗蜜多心经</h1>
+            <div class="subtitle">观行照度</div>
+            <div>
+                <span class="lotus">✿</span>
+                <span class="lotus">❀</span>
+                <span class="lotus">✤</span>
+            </div>
+        </div>
+        
+        <div class="sutra-container">
+            <div class="sutra-section">
+                <div class="sutra-text">
+                    <span class="chinese-char">观<ruby class="pinyin">guān</ruby></span>
+                    <span class="chinese-char">自<ruby class="pinyin">zì</ruby></span>
+                    <span class="chinese-char">在<ruby class="pinyin">zài</ruby></span>
+                    <span class="chinese-char">菩<ruby class="pinyin">pú</ruby></span>
+                    <span class="chinese-char">萨<ruby class="pinyin">sà</ruby></span>，
+                    <span class="chinese-char">行<ruby class="pinyin">xíng</ruby></span>
+                    <span class="chinese-char">深<ruby class="pinyin">shēn</ruby></span>
+                    <span class="chinese-char">般<ruby class="pinyin">bō</ruby></span>
+                    <span class="chinese-char">若<ruby class="pinyin">rě</ruby></span>
+                    <span class="chinese-char">波<ruby class="pinyin">bō</ruby></span>
+                    <span class="chinese-char">罗<ruby class="pinyin">luó</ruby></span>
+                    <span class="chinese-char">蜜<ruby class="pinyin">mì</ruby></span>
+                    <span class="chinese-char">多<ruby class="pinyin">duō</ruby></span>
+                    <span class="chinese-char">时<ruby class="pinyin">shí</ruby></span>，
+                    <span class="chinese-char">照<ruby class="pinyin">zhào</ruby></span>
+                    <span class="chinese-char">见<ruby class="pinyin">jiàn</ruby></span>
+                    <span class="chinese-char">五<ruby class="pinyin">wǔ</ruby></span>
+                    <span class="chinese-char">蕴<ruby class="pinyin">yùn</ruby></span>
+                    <span class="chinese-char">皆<ruby class="pinyin">jiē</ruby></span>
+                    <span class="chinese-char">空<ruby class="pinyin">kōng</ruby></span>，
+                    <span class="chinese-char">度<ruby class="pinyin">dù</ruby></span>
+                    <span class="chinese-char">一<ruby class="pinyin">yī</ruby></span>
+                    <span class="chinese-char">切<ruby class="pinyin">qiē</ruby></span>
+                    <span class="chinese-char">苦<ruby class="pinyin">kǔ</ruby></span>
+                    <span class="chinese-char">厄<ruby class="pinyin">è</ruby></span>。
+                </div>
+                
+                <div class="sutra-text">
+                    <span class="chinese-char">舍<ruby class="pinyin">shě</ruby></span>
+                    <span class="chinese-char">利<ruby class="pinyin">lì</ruby></span>
+                    <span class="chinese-char">子<ruby class="pinyin">zǐ</ruby></span>，
+                    <span class="chinese-char">色<ruby class="pinyin">sè</ruby></span>
+                    <span class="chinese-char">不<ruby class="pinyin">bù</ruby></span>
+                    <span class="chinese-char">异<ruby class="pinyin">yì</ruby></span>
+                    <span class="chinese-char">空<ruby class="pinyin">kōng</ruby></span>，
+                    <span class="chinese-char">空<ruby class="pinyin">kōng</ruby></span>
+                    <span class="chinese-char">不<ruby class="pinyin">bù</ruby></span>
+                    <span class="chinese-char">异<ruby class="pinyin">yì</ruby></span>
+                    <span class="chinese-char">色<ruby class="pinyin">sè</ruby></span>；
+                    <span class="chinese-char">色<ruby class="pinyin">sè</ruby></span>
+                    <span class="chinese-char">即<ruby class="pinyin">jí</ruby></span>
+                    <span class="chinese-char">是<ruby class="pinyin">shì</ruby></span>
+                    <span class="chinese-char">空<ruby class="pinyin">kōng</ruby></span>，
+                    <span class="chinese-char">空<ruby class="pinyin">kōng</ruby></span>
+                    <span class="chinese-char">即<ruby class="pinyin">jí</ruby></span>
+                    <span class="chinese-char">是<ruby class="pinyin">shì</ruby></span>
+                    <span class="chinese-char">色<ruby class="pinyin">sè</ruby></span>。
+                </div>
+                
+                <div class="sutra-text">
+                    <span class="chinese-char">受<ruby class="pinyin">shòu</ruby></span>
+                    <span class="chinese-char">想<ruby class="pinyin">xiǎng</ruby></span>
+                    <span class="chinese-char">行<ruby class="pinyin">xíng</ruby></span>
+                    <span class="chinese-char">识<ruby class="pinyin">shí</ruby></span>，
+                    <span class="chinese-char">亦<ruby class="pinyin">yì</ruby></span>
+                    <span class="chinese-char">复<ruby class="pinyin">fù</ruby></span>
+                    <span class="chinese-char">如<ruby class="pinyin">rú</ruby></span>
+                    <span class="chinese-char">是<ruby class="pinyin">shì</ruby></span>。
+                </div>
+            </div>
+            
+            <div class="sutra-section">
+                <h2></h2>
+                <div class="sutra-text">
+                    <span class="chinese-char">舍<ruby class="pinyin">shě</ruby></span>
+                    <span class="chinese-char">利<ruby class="pinyin">lì</ruby></span>
+                    <span class="chinese-char">子<ruby class="pinyin">zǐ</ruby></span>，
+                    <span class="chinese-char">是<ruby class="pinyin">shì</ruby></span>
+                    <span class="chinese-char">诸<ruby class="pinyin">zhū</ruby></span>
+                    <span class="chinese-char">法<ruby class="pinyin">fǎ</ruby></span>
+                    <span class="chinese-char">空<ruby class="pinyin">kōng</ruby></span>
+                    <span class="chinese-char">相<ruby class="pinyin">xiàng</ruby></span>，
+                    <span class="chinese-char">不<ruby class="pinyin">bù</ruby></span>
+                    <span class="chinese-char">生<ruby class="pinyin">shēng</ruby></span>
+                    <span class="chinese-char">不<ruby class="pinyin">bù</ruby></span>
+                    <span class="chinese-char">灭<ruby class="pinyin">miè</ruby></span>，
+                    <span class="chinese-char">不<ruby class="pinyin">bù</ruby></span>
+                    <span class="chinese-char">垢<ruby class="pinyin">gòu</ruby></span>
+                    <span class="chinese-char">不<ruby class="pinyin">bù</ruby></span>
+                    <span class="chinese-char">净<ruby class="pinyin">jìng</ruby></span>，
+                    <span class="chinese-char">不<ruby class="pinyin">bù</ruby></span>
+                    <span class="chinese-char">增<ruby class="pinyin">zēng</ruby></span>
+                    <span class="chinese-char">不<ruby class="pinyin">bù</ruby></span>
+                    <span class="chinese-char">减<ruby class="pinyin">jiǎn</ruby></span>。
+                </div>
+                
+                <div class="sutra-text">
+                    <span class="chinese-char">是<ruby class="pinyin">shì</ruby></span>
+                    <span class="chinese-char">故<ruby class="pinyin">gù</ruby></span>
+                    <span class="chinese-char">空<ruby class="pinyin">kōng</ruby></span>
+                    <span class="chinese-char">中<ruby class="pinyin">zhōng</ruby></span>
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">色<ruby class="pinyin">sè</ruby></span>，
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">受<ruby class="pinyin">shòu</ruby></span>
+                    <span class="chinese-char">想<ruby class="pinyin">xiǎng</ruby></span>
+                    <span class="chinese-char">行<ruby class="pinyin">xíng</ruby></span>
+                    <span class="chinese-char">识<ruby class="pinyin">shí</ruby></span>，
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">眼<ruby class="pinyin">yǎn</ruby></span>
+                    <span class="chinese-char">耳<ruby class="pinyin">ěr</ruby></span>
+                    <span class="chinese-char">鼻<ruby class="pinyin">bí</ruby></span>
+                    <span class="chinese-char">舌<ruby class="pinyin">shé</ruby></span>
+                    <span class="chinese-char">身<ruby class="pinyin">shēn</ruby></span>
+                    <span class="chinese-char">意<ruby class="pinyin">yì</ruby></span>，
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">色<ruby class="pinyin">sè</ruby></span>
+                    <span class="chinese-char">声<ruby class="pinyin">shēng</ruby></span>
+                    <span class="chinese-char">香<ruby class="pinyin">xiāng</ruby></span>
+                    <span class="chinese-char">味<ruby class="pinyin">wèi</ruby></span>
+                    <span class="chinese-char">触<ruby class="pinyin">chù</ruby></span>
+                    <span class="chinese-char">法<ruby class="pinyin">fǎ</ruby></span>，
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">眼<ruby class="pinyin">yǎn</ruby></span>
+                    <span class="chinese-char">界<ruby class="pinyin">jiè</ruby></span>，
+                    <span class="chinese-char">乃<ruby class="pinyin">nǎi</ruby></span>
+                    <span class="chinese-char">至<ruby class="pinyin">zhì</ruby></span>
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">意<ruby class="pinyin">yì</ruby></span>
+                    <span class="chinese-char">识<ruby class="pinyin">shí</ruby></span>
+                    <span class="chinese-char">界<ruby class="pinyin">jiè</ruby></span>。
+                </div>
+            </div>
+            
+            <div class="sutra-section">
+                <h2></h2>
+                <div class="sutra-text">
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">明<ruby class="pinyin">míng</ruby></span>，
+                    <span class="chinese-char">亦<ruby class="pinyin">yì</ruby></span>
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">明<ruby class="pinyin">míng</ruby></span>
+                    <span class="chinese-char">尽<ruby class="pinyin">jìn</ruby></span>，
+                    <span class="chinese-char">乃<ruby class="pinyin">nǎi</ruby></span>
+                    <span class="chinese-char">至<ruby class="pinyin">zhì</ruby></span>
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">老<ruby class="pinyin">lǎo</ruby></span>
+                    <span class="chinese-char">死<ruby class="pinyin">sǐ</ruby></span>，
+                    <span class="chinese-char">亦<ruby class="pinyin">yì</ruby></span>
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">老<ruby class="pinyin">lǎo</ruby></span>
+                    <span class="chinese-char">死<ruby class="pinyin">sǐ</ruby></span>
+                    <span class="chinese-char">尽<ruby class="pinyin">jìn</ruby></span>。
+                </div>
+                
+                <div class="sutra-text">
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">苦<ruby class="pinyin">kǔ</ruby></span>
+                    <span class="chinese-char">集<ruby class="pinyin">jí</ruby></span>
+                    <span class="chinese-char">灭<ruby class="pinyin">miè</ruby></span>
+                    <span class="chinese-char">道<ruby class="pinyin">dào</ruby></span>，
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">智<ruby class="pinyin">zhì</ruby></span>
+                    <span class="chinese-char">亦<ruby class="pinyin">yì</ruby></span>
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">得<ruby class="pinyin">dé</ruby></span>。
+                    <span class="chinese-char">以<ruby class="pinyin">yǐ</ruby></span>
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">所<ruby class="pinyin">suǒ</ruby></span>
+                    <span class="chinese-char">得<ruby class="pinyin">dé</ruby></span>
+                    <span class="chinese-char">故<ruby class="pinyin">gù</ruby></span>。
+                    <span class="chinese-char">菩<ruby class="pinyin">pú</ruby></span>
+                    <span class="chinese-char">提<ruby class="pinyin">tí</ruby></span>
+                    <span class="chinese-char">萨<ruby class="pinyin">sà</ruby></span>
+                    <span class="chinese-char">埵<ruby class="pinyin">duǒ</ruby></span>，
+                    <span class="chinese-char">依<ruby class="pinyin">yī</ruby></span>
+                    <span class="chinese-char">般<ruby class="pinyin">bō</ruby></span>
+                    <span class="chinese-char">若<ruby class="pinyin">rě</ruby></span>
+                    <span class="chinese-char">波<ruby class="pinyin">bō</ruby></span>
+                    <span class="chinese-char">罗<ruby class="pinyin">luó</ruby></span>
+                    <span class="chinese-char">蜜<ruby class="pinyin">mì</ruby></span>
+                    <span class="chinese-char">多<ruby class="pinyin">duō</ruby></span>
+                    <span class="chinese-char">故<ruby class="pinyin">gù</ruby></span>，
+                    <span class="chinese-char">心<ruby class="pinyin">xīn</ruby></span>
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">罣<ruby class="pinyin">guà</ruby></span>
+                    <span class="chinese-char">碍<ruby class="pinyin">ài</ruby></span>。
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">罣<ruby class="pinyin">guà</ruby></span>
+                    <span class="chinese-char">碍<ruby class="pinyin">ài</ruby></span>
+                    <span class="chinese-char">故<ruby class="pinyin">gù</ruby></span>，
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">有<ruby class="pinyin">yǒu</ruby></span>
+                    <span class="chinese-char">恐<ruby class="pinyin">kǒng</ruby></span>
+                    <span class="chinese-char">怖<ruby class="pinyin">bù</ruby></span>，
+                    <span class="chinese-char">远<ruby class="pinyin">yuǎn</ruby></span>
+                    <span class="chinese-char">离<ruby class="pinyin">lí</ruby></span>
+                    <span class="chinese-char">颠<ruby class="pinyin">diān</ruby></span>
+                    <span class="chinese-char">倒<ruby class="pinyin">dǎo</ruby></span>
+                    <span class="chinese-char">梦<ruby class="pinyin">mèng</ruby></span>
+                    <span class="chinese-char">想<ruby class="pinyin">xiǎng</ruby></span>，
+                    <span class="chinese-char">究<ruby class="pinyin">jiū</ruby></span>
+                    <span class="chinese-char">竟<ruby class="pinyin">jìng</ruby></span>
+                    <span class="chinese-char">涅<ruby class="pinyin">niè</ruby></span>
+                    <span class="chinese-char">槃<ruby class="pinyin">pán</ruby></span>。
+                </div>
+                
+                <div class="sutra-text">
+                    <span class="chinese-char">三<ruby class="pinyin">sān</ruby></span>
+                    <span class="chinese-char">世<ruby class="pinyin">shì</ruby></span>
+                    <span class="chinese-char">诸<ruby class="pinyin">zhū</ruby></span>
+                    <span class="chinese-char">佛<ruby class="pinyin">fó</ruby></span>，
+                    <span class="chinese-char">依<ruby class="pinyin">yī</ruby></span>
+                    <span class="chinese-char">般<ruby class="pinyin">bō</ruby></span>
+                    <span class="chinese-char">若<ruby class="pinyin">rě</ruby></span>
+                    <span class="chinese-char">波<ruby class="pinyin">bō</ruby></span>
+                    <span class="chinese-char">罗<ruby class="pinyin">luó</ruby></span>
+                    <span class="chinese-char">蜜<ruby class="pinyin">mì</ruby></span>
+                    <span class="chinese-char">多<ruby class="pinyin">duō</ruby></span>
+                    <span class="chinese-char">故<ruby class="pinyin">gù</ruby></span>，
+                    <span class="chinese-char">得<ruby class="pinyin">dé</ruby></span>
+                    <span class="chinese-char">阿<ruby class="pinyin">ā</ruby></span>
+                    <span class="chinese-char">耨<ruby class="pinyin">nòu</ruby></span>
+                    <span class="chinese-char">多<ruby class="pinyin">duō</ruby></span>
+                    <span class="chinese-char">罗<ruby class="pinyin">luó</ruby></span>
+                    <span class="chinese-char">三<ruby class="pinyin">sān</ruby></span>
+                    <span class="chinese-char">藐<ruby class="pinyin">miǎo</ruby></span>
+                    <span class="chinese-char">三<ruby class="pinyin">sān</ruby></span>
+                    <span class="chinese-char">菩<ruby class="pinyin">pú</ruby></span>
+                    <span class="chinese-char">提<ruby class="pinyin">tí</ruby></span>。
+                </div>
+                
+                <div class="sutra-text">
+            <div class="sutra-section">
+                <h2></h2>
+                <div class="sutra-text">
+                    <span class="chinese-char">故<ruby class="pinyin">gù</ruby></span>
+                    <span class="chinese-char">知<ruby class="pinyin">zhī</ruby></span>
+                    <span class="chinese-char">般<ruby class="pinyin">bō</ruby></span>
+                    <span class="chinese-char">若<ruby class="pinyin">rě</ruby></span>
+                    <span class="chinese-char">波<ruby class="pinyin">bō</ruby></span>
+                    <span class="chinese-char">罗<ruby class="pinyin">luó</ruby></span>
+                    <span class="chinese-char">蜜<ruby class="pinyin">mì</ruby></span>
+                    <span class="chinese-char">多<ruby class="pinyin">duō</ruby></span>，
+                    <span class="chinese-char">是<ruby class="pinyin">shì</ruby></span>
+                    <span class="chinese-char">大<ruby class="pinyin">dà</ruby></span>
+                    <span class="chinese-char">神<ruby class="pinyin">shén</ruby></span>
+                    <span class="chinese-char">咒<ruby class="pinyin">zhòu</ruby></span>，
+                    <span class="chinese-char">是<ruby class="pinyin">shì</ruby></span>
+                    <span class="chinese-char">大<ruby class="pinyin">dà</ruby></span>
+                    <span class="chinese-char">明<ruby class="pinyin">míng</ruby></span>
+                    <span class="chinese-char">咒<ruby class="pinyin">zhòu</ruby></span>，
+                    <span class="chinese-char">是<ruby class="pinyin">shì</ruby></span>
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">上<ruby class="pinyin">shàng</ruby></span>
+                    <span class="chinese-char">咒<ruby class="pinyin">zhòu</ruby></span>，
+                    <span class="chinese-char">是<ruby class="pinyin">shì</ruby></span>
+                    <span class="chinese-char">无<ruby class="pinyin">wú</ruby></span>
+                    <span class="chinese-char">等<ruby class="pinyin">děng</ruby></span>
+                    <span class="chinese-char">等<ruby class="pinyin">děng</ruby></span>
+                    <span class="chinese-char">咒<ruby class="pinyin">zhòu</ruby></span>，
+                    <span class="chinese-char">能<ruby class="pinyin">néng</ruby></span>
+                    <span class="chinese-char">除<ruby class="pinyin">chú</ruby></span>
+                    <span class="chinese-char">一<ruby class="pinyin">yī</ruby></span>
+                    <span class="chinese-char">切<ruby class="pinyin">qiē</ruby></span>
+                    <span class="chinese-char">苦<ruby class="pinyin">kǔ</ruby></span>，
+                    <span class="chinese-char">真<ruby class="pinyin">zhēn</ruby></span>
+                    <span class="chinese-char">实<ruby class="pinyin">shí</ruby></span>
+                    <span class="chinese-char">不<ruby class="pinyin">bù</ruby></span>
+                    <span class="chinese-char">虚<ruby class="pinyin">xū</ruby></span>。
+                </div>
+                
+                <div class="sutra-text">
+                    <span class="chinese-char">故<ruby class="pinyin">gù</ruby></span>
+                    <span class="chinese-char">说<ruby class="pinyin">shuō</ruby></span>
+                    <span class="chinese-char">般<ruby class="pinyin">bō</ruby></span>
+                    <span class="chinese-char">若<ruby class="pinyin">rě</ruby></span>
+                    <span class="chinese-char">波<ruby class="pinyin">bō</ruby></span>
+                    <span class="chinese-char">罗<ruby class="pinyin">luó</ruby></span>
+                    <span class="chinese-char">蜜<ruby class="pinyin">mì</ruby></span>
+                    <span class="chinese-char">多<ruby class="pinyin">duō</ruby></span>
+                    <span class="chinese-char">咒<ruby class="pinyin">zhòu</ruby></span>，
+                    <span class="chinese-char">即<ruby class="pinyin">jí</ruby></span>
+                    <span class="chinese-char">说<ruby class="pinyin">shuō</ruby></span>
+                    <span class="chinese-char">咒<ruby class="pinyin">zhòu</ruby></span>
+                    <span class="chinese-char">曰<ruby class="pinyin">yuē</ruby></span>：
+                </div>
+                
+                <div class="sutra-text" style="font-size: 40px; margin-top: 30px; color: #8b0000;">
+                    <span class="chinese-char">揭<ruby class="pinyin">jiē</ruby></span>
+                    <span class="chinese-char">谛<ruby class="pinyin">dì</ruby></span>
+                    <span class="chinese-char">揭<ruby class="pinyin">jiē</ruby></span>
+                    <span class="chinese-char">谛<ruby class="pinyin">dì</ruby></span>，
+                    <span class="chinese-char">波<ruby class="pinyin">bō</ruby></span>
+                    <span class="chinese-char">罗<ruby class="pinyin">luó</ruby></span>
+                    <span class="chinese-char">揭<ruby class="pinyin">jiē</ruby></span>
+                    <span class="chinese-char">谛<ruby class="pinyin">dì</ruby></span>，
+                    <span class="chinese-char">波<ruby class="pinyin">bō</ruby></span>
+                    <span class="chinese-char">罗<ruby class="pinyin">luó</ruby></span>
+                    <span class="chinese-char">僧<ruby class="pinyin">sēng</ruby></span>
+                    <span class="chinese-char">揭<ruby class="pinyin">jiē</ruby></span>
+                    <span class="chinese-char">谛<ruby class="pinyin">dì</ruby></span>，
+                    <span class="chinese-char">菩<ruby class="pinyin">pú</ruby></span>
+                    <span class="chinese-char">提<ruby class="pinyin">tí</ruby></span>
+                    <span class="chinese-char">萨<ruby class="pinyin">sà</ruby></span>
+                    <span class="chinese-char">婆<ruby class="pinyin">pó</ruby></span>
+                    <span class="chinese-char">诃<ruby class="pinyin">hē</ruby></span>。
+                </div>
+            </div>
+        </div>
+        
+        <div class="note">
+            注：此经文依据玄奘法师所译《般若波罗蜜多心经》
+        </div>
+        
+        <div class="footer">
+            <span class="buddha-hand">☸</span>
+            <p>愿以此功德 庄严佛净土</p>
+            <p>上报四重恩 下济三途苦</p>
+            <p>若有见闻者 悉发菩提心</p>
+            <p>尽此一报身 同生极乐国</p>
+        </div>
+    </div>
+</body>
+</html>
